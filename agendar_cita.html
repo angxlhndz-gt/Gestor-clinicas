@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendar Cita</title>
+</head>
+<body>
+    <h2>Agendar Cita</h2>
+    <form method="POST">
+        <label for="paciente">Paciente:</label>
+        <input type="text" name="paciente" required><br>
+        <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha" required><br>
+        <label for="hora">Hora:</label>
+        <input type="time" name="hora" required><br>
+        <label for="doctor">Doctor:</label>
+        <input type="text" name="doctor" required><br>
+        <label for="descripcion">Descripción:</label>
+        <textarea name="descripcion" required></textarea><br>
+        <button type="submit">Agendar</button>
+    </form>
+</body>
+</html>

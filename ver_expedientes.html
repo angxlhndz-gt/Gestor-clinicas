@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Expedientes</title>
+</head>
+<body>
+    <h2>Ver Expedientes</h2>
+    <form method="POST">
+        <label for="query">Buscar por Paciente o Fecha:</label>
+        <input type="text" name="query" id="query" value="{{ query }}"><br>
+        <button type="submit">Buscar</button>
+    </form>
+    <h2>Lista de Expedientes</h2>
+    <ul>
+        {% for expediente in expedientes %}
+            <li>{{ expediente.paciente }} - {{ expediente.fecha }} - Diagnóstico: {{ expediente.diagnostico }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

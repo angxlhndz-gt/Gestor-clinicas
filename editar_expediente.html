@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Expediente</title>
+</head>
+<body>
+    <h2>Editar Expediente</h2>
+    <form method="POST">
+        <label for="diagnostico">Diagnóstico:</label>
+        <textarea name="diagnostico" required>{{ expediente.diagnostico }}</textarea><br>
+        <label for="tratamiento">Tratamiento:</label>
+        <textarea name="tratamiento" required>{{ expediente.tratamiento }}</textarea><br>
+        <label for="notas">Notas:</label>
+        <textarea name="notas" required>{{ expediente.notas }}</textarea><br>
+        <button type="submit">Guardar Cambios</button>
+    </form>
+</body>
+</html>

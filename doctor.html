@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor</title>
+</head>
+<body>
+    <h2>Pacientes Registrados</h2>
+    <form method="POST">
+        <label for="query">Buscar por Nombre o Apellido:</label>
+        <input type="text" name="query" id="query" value="{{ query }}"><br>
+        <button type="submit">Buscar</button>
+    </form>
+    <h2>Lista de Pacientes</h2>
+    <ul>
+        {% for paciente in pacientes %}
+            <li>{{ paciente.nombre }} {{ paciente.apellidos }} ({{ paciente.identificacion }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Citas del Doctor</title>
+</head>
+<body>
+    <h2>Citas Pendientes</h2>
+    <form method="POST">
+        <label for="query">Buscar por Paciente o Fecha:</label>
+        <input type="text" name="query" id="query" value="{{ query }}"><br>
+        <button type="submit">Buscar</button>
+    </form>
+    <h2>Lista de Citas</h2>
+    <ul>
+        {% for cita in citas %}
+            <li>{{ cita.paciente }} - {{ cita.fecha }} {{ cita.hora }} - Doctor: {{ cita.doctor }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
